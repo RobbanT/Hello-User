@@ -1,0 +1,47 @@
+body {
+    background-color: #f6f6f6;
+    margin: 0;
+}
+
+header {
+    background-color: #1a1a1d;
+    padding: 1px 0 0 25px;
+    border-bottom: 3px solid #3438f5;
+}
+
+h1 {
+    font: lighter 32px Arial;
+    color: white;
+}
+
+header img {
+    float: left;
+    width: 35px;
+    height: 35px;
+    padding: 18px 10px 0 0;
+}
+
+nav {
+    background-color: #333333;
+    text-align: center;
+    padding: 5px 0 5px 0;
+}
+
+nav a {
+    font: bold 15px Arial;
+    color: white;
+    text-decoration: none;
+    padding: 5px 25px 5px 25px;
+}
+
+nav a:hover {
+    background-color: #1a1a1d;
+}
+
+main {
+    display: flex;
+    padding-top: 25px 0 25px 0;
+    height: 75vh;
+    justify-content: center;
+    align-items: center;
+}

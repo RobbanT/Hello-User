@@ -1,0 +1,87 @@
+form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 25px;
+    border-radius: 50px;
+    border-color: red;
+    border-width: 100px;
+    padding: 25px;
+    border: 1px solid #606062;
+    border-radius: 5px;
+}
+
+input {
+    display: block;
+    border-color: #3438f5;
+    border-width: 1px;
+    height: 40px;
+    width: 250px;
+    font-size: medium;
+    color: #1a1a1d;
+    caret-color: #1a1a1d;
+}
+
+input:focus {
+    outline: none;
+}
+
+#username {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-image: url("user.png");
+    background-repeat: no-repeat;
+    background-position-x: left 10px;
+    background-position-y: 14px;
+    padding-left: 35px;
+}
+
+#password {
+    border-top: 0px;
+    background-image: url("lock.png");
+    background-repeat: no-repeat;
+    background-position-x: left 10px;
+    background-position-y: 14px;
+    padding-left: 35px;
+    border-bottom: 0px;
+}
+
+#passwordConfirm {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-image: url("lock.png");
+    background-repeat: no-repeat;
+    background-position-x: left 10px;
+    background-position-y: 14px;
+    padding-left: 35px;
+}
+
+#join {
+    background-color: #3438f5;
+    height: 40px;
+    width: 290px;
+    color: white;
+    border-radius: 30px;
+    margin-top: 5px;
+    font-size: large;
+    font-weight: bold;
+}
+
+#login:hover {
+    cursor: pointer;
+    background-color: #0105bb;
+}
+
+a {
+    color: #3438f5;
+    font-family: Arial;
+    font-size: medium;
+    text-decoration: none;
+    padding-left: 36%;
+}
+
+a:hover {
+    text-decoration: none;
+}
