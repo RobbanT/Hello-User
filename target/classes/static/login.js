@@ -33,12 +33,22 @@ password.addEventListener("focusout", () => {
 });
 
 login.addEventListener("click", () => {
-    if (username.value === "") {
+    if (username.value === "admin" && password.value === "admin") {
+        localStorage.setItem("admin", "admin");
+        username.value = "";
+        password.value = "";
+        username.setAttribute("placeholder", "Användarnamn");
+        password.setAttribute("placeholder", "Lösenord");
+        return;
+    }
+    if (username.value !== "admin") {
+        username.value = "";
         username.style.backgroundColor = "#FAF1F5";
         username.style.borderColor = "#C32B57";
         username.setAttribute("placeholder", "Felaktigt Användarnamn!");
     }
-    if (password.value === "") {
+    if (password.value !== "admin") {
+        password.value = "";
         password.style.backgroundColor = "#FAF1F5";
         password.style.borderColor = "#C32B57";
         password.setAttribute("placeholder", "Felaktigt Lösenord!");

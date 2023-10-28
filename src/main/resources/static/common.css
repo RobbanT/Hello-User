@@ -5,13 +5,14 @@ body {
 
 header {
     background-color: #1a1a1d;
-    padding: 1px 0 0 25px;
+    padding: 1px 25px 0 25px;
     border-bottom: 3px solid #3438f5;
 }
 
 h1 {
     font: lighter 32px Arial;
     color: white;
+    display: inline-block;
 }
 
 header img {
