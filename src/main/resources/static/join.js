@@ -63,4 +63,5 @@ join.addEventListener("click", () => {
         passwordConfirm.style.borderColor = "#C32B57";
         passwordConfirm.setAttribute("placeholder", "Felaktigt Lösenord!");
     }
+    document.getElementsByTagName("form").item(0).submit();
 });

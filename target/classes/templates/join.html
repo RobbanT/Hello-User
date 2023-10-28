@@ -21,8 +21,8 @@
             <a href="/login">Logga in</a>
         </nav>
         <main>
-            <form>
-                <input class="inputField topInputField" id="username" type="text" placeholder="Användarnamn" maxlength="24" />
+            <form method="post" th:action="@{/new-member}" th:object="${newMember}">
+                <input class="inputField topInputField" id="username" type="text" th:field="*{username}" placeholder="Användarnamn" maxlength="24" />
                 <input class="inputField middleInputField" id="password" type="text" placeholder="Lösenord" maxlength="22" />
                 <input class="inputField bottomInputField" id="passwordConfirm" type="text" placeholder="Bekräfta Lösenord" maxlength="22" />
                 <input class="submitButton" id="join" type="button" value="Skapa konto" />

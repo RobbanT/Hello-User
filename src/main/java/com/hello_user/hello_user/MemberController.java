@@ -6,6 +6,8 @@ import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MemberController {
@@ -13,9 +15,6 @@ public class MemberController {
     private static final List<Member> members = new ArrayList<>();
     static {
         members.add(new Member("admin", "admin"));
-        members.add(new Member("Dolan", "admin"));
-        members.add(new Member("Löfven", "admin"));
-        members.add(new Member("Sjöstedt", "admin"));
     }
 
     @GetMapping("/")
@@ -27,6 +26,7 @@ public class MemberController {
     @GetMapping("/join")
     String getJoin(Model model) {
         model.addAttribute("members", members);
+        model.addAttribute("newMember", new Member("", ""));
         return "join";
     }
 
@@ -41,4 +41,11 @@ public class MemberController {
         model.addAttribute("members", members);
         return "login";
     }
+
+    @PostMapping("/new-member")
+    String newMember(@RequestParam("username") String username) {
+        members.add(new Member(username, "dada"));
+        return "redirect:/member";
+    }
+
 }
