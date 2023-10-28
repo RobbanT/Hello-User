@@ -6,7 +6,7 @@
         <title>Hello User</title>
         <link rel="icon" href="favicon.png" />
         <link rel="stylesheet" href="common.css" />
-        <link rel="stylesheet" href="login.css" />
+        <link rel="stylesheet" href="form.css" />
         <script src="login.js" defer></script>
     </head>
     <body>
@@ -22,9 +22,9 @@
         </nav>
         <main>
             <form>
-                <input id="username" type="text" placeholder="Användarnamn" maxlength="24" />
-                <input id="password" type="password" placeholder="Lösenord" maxlength="22" />
-                <input id="login" type="submit" value="Logga in" />
+                <input class="inputField topInputField" id="username" type="text" placeholder="Användarnamn" maxlength="24" />
+                <input class="inputField bottomInputField" id="password" type="password" placeholder="Lösenord" maxlength="22" />
+                <input class="submitButton" id="login" type="submit" value="Logga in" />
             </form>
         </main>
     </body>

@@ -24,14 +24,14 @@ header img {
 nav {
     background-color: #333333;
     text-align: center;
-    padding: 5px 0 5px 0;
+    padding: 5px 0;
 }
 
 nav a {
     font: bold 15px Arial;
     color: white;
     text-decoration: none;
-    padding: 5px 25px 5px 25px;
+    padding: 5px 25px;
 }
 
 nav a:hover {
@@ -40,7 +40,7 @@ nav a:hover {
 
 main {
     display: flex;
-    padding-top: 25px 0 25px 0;
+    padding: 25px 0;
     height: 75vh;
     justify-content: center;
     align-items: center;
