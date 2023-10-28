@@ -2,7 +2,8 @@
 
 let username = document.getElementById("username");
 let password = document.getElementById("password");
-let login = document.getElementById("login");
+let passwordConfirm = document.getElementById("passwordConfirm");
+let join = document.getElementById("join");
 
 username.addEventListener("focusin", () => {
     if (username.getAttribute("placeholder") !== "") {
@@ -32,7 +33,21 @@ password.addEventListener("focusout", () => {
     }
 });
 
-login.addEventListener("click", () => {
+passwordConfirm.addEventListener("focusin", () => {
+    if (passwordConfirm.getAttribute("placeholder") !== "") {
+        passwordConfirm.setAttribute("placeholder", "");
+        passwordConfirm.style.backgroundColor = "#FFFFFF";
+        passwordConfirm.style.borderColor = "#3438f5";
+    }
+});
+
+passwordConfirm.addEventListener("focusout", () => {
+    if (passwordConfirm.getAttribute("placeholder") === "") {
+        passwordConfirm.setAttribute("placeholder", "Bekräfta Lösenord");
+    }
+});
+
+join.addEventListener("click", () => {
     if (username.value === "") {
         username.style.backgroundColor = "#FAF1F5";
         username.style.borderColor = "#C32B57";
@@ -42,5 +57,10 @@ login.addEventListener("click", () => {
         password.style.backgroundColor = "#FAF1F5";
         password.style.borderColor = "#C32B57";
         password.setAttribute("placeholder", "Felaktigt Lösenord!");
+    }
+    if (passwordConfirm.value === "") {
+        passwordConfirm.style.backgroundColor = "#FAF1F5";
+        passwordConfirm.style.borderColor = "#C32B57";
+        passwordConfirm.setAttribute("placeholder", "Felaktigt Lösenord!");
     }
 });
