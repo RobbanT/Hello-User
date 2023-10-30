@@ -1,26 +1,37 @@
 "use strict";
 
-if (localStorage.getItem("admin") !== null) {
-    let header = document.body.getElementsByTagName("header").item(0);
+//Skapar den lilla rutan längst uppe till höger som säger att admin är inloggad.
+function createAdminParagraph() {
+    //Skapar ett nytt element.
     let p = document.createElement("p");
-    header.appendChild(p);
+    //Ställer in det nya elementet.
     p.style.display = "inline";
     p.style.float = "right";
     p.style.marginTop = "20px";
     p.style.padding = "10px";
-    p.innerHTML = "Inloggad som admin!";
+    p.innerText = "Inloggad som admin!";
     p.style.border = "1px solid #3438f5";
     p.style.borderRadius = "5px";
     p.style.color = "white";
     p.style.backgroundColor = "#1a1a1d";
     p.style.font = "bold 15px Arial";
+    //Lägger sist till elementen hos DOM:en.
+    document.body.getElementsByTagName("header").item(0).appendChild(p);
+}
 
-    let nav = document.body.getElementsByTagName("nav").item(0);
-    let a = document.createElement("nav");
-    nav.appendChild(a);
+//Skapar länk för att bli medlem på webbsidan.
+function createAdminJoinLink() {
+    //Skapar ett nytt element.
+    let a = document.createElement("a");
+    //Ställer in det nya elementet.
     a.innerText = "Bli medlem";
-    a.style.font = "bold 15px Arial";
-    a.style.color = "white";
-    a.style.text = "decoration: none";
-    a.style.padding = "5px 25px";
+    a.setAttribute("href", "/join");
+    //Lägger sist till elementen hos DOM:en.
+    document.body.getElementsByTagName("nav").item(0).appendChild(a);
+}
+
+//Är admin inloggad (finns admin i localStorage?) skapar vi det som ska vara tillgängligt enbart för admin.
+if (localStorage.getItem("admin") !== null) {
+    createAdminParagraph();
+    createAdminJoinLink();
 }
