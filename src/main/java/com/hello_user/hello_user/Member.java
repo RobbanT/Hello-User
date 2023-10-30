@@ -1,21 +1,13 @@
 package com.hello_user.hello_user;
 
+//Klass som använd för att skapa objekt som spara uppgifter om alla våra användare.
 public class Member {
+    // Vi sparar användarens användarnamn och lösenord.
     private String username, password;
-    boolean loggedIn;
-
-    public boolean isLoggedIn() {
-        return loggedIn;
-    }
-
-    public void setLoggedIn(boolean loggedIn) {
-        this.loggedIn = loggedIn;
-    }
 
     public Member(String username, String password) {
         this.username = username;
         this.password = password;
-        this.loggedIn = false;
     }
 
     public String getUsername() {
