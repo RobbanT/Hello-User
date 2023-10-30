@@ -10,6 +10,11 @@ public class Member {
         this.password = password;
     }
 
+    public Member() {
+        this.username = "";
+        this.password = "";
+    }
+
     public String getUsername() {
         return username;
     }

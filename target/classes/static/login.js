@@ -54,3 +54,5 @@ login.addEventListener("click", () => {
         password.setAttribute("placeholder", "Felaktigt Lösenord!");
     }
 });
+
+console.log($("#admin").val());

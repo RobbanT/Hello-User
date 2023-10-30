@@ -21,7 +21,7 @@
             <a href="/login">Logga in</a>
         </nav>
         <main>
-            <form>
+            <form th:value="${admin}">
                 <input class="inputField topInputField" id="username" type="text" placeholder="Användarnamn" maxlength="24" />
                 <input class="inputField bottomInputField" id="password" type="password" placeholder="Lösenord" maxlength="22" />
                 <input class="submitButton" id="login" type="button" value="Logga in" />
