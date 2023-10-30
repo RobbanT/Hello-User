@@ -14,4 +14,13 @@ if (localStorage.getItem("admin") !== null) {
     p.style.color = "white";
     p.style.backgroundColor = "#1a1a1d";
     p.style.font = "bold 15px Arial";
+
+    let nav = document.body.getElementsByTagName("nav").item(0);
+    let a = document.createElement("nav");
+    nav.appendChild(a);
+    a.innerText = "Bli medlem";
+    a.style.font = "bold 15px Arial";
+    a.style.color = "white";
+    a.style.text = "decoration: none";
+    a.style.padding = "5px 25px";
 }
