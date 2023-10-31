@@ -37,7 +37,20 @@ document.getElementById("join").addEventListener("click", () => {
     }
     if (username.value === adminUsername) {
         username.value = "";
+        username.style.backgroundColor = "#FAF1F5";
+        username.style.borderColor = "#C32B57";
         username.setAttribute("placeholder", "Bara en " + adminUsername + " får existera! :)");
+        return;
+    }
+    if (password.value !== passwordConfirm.value) {
+        password.value = "";
+        password.style.backgroundColor = "#FAF1F5";
+        password.style.borderColor = "#C32B57";
+        password.setAttribute("placeholder", "Lösenord ej lika!");
+        passwordConfirm.value = "";
+        passwordConfirm.style.backgroundColor = "#FAF1F5";
+        passwordConfirm.style.borderColor = "#C32B57";
+        passwordConfirm.setAttribute("placeholder", "Lösenord ej lika!");
         return;
     }
     document.getElementsByTagName("form").item(0).submit();

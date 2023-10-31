@@ -1,7 +1,7 @@
 "use strict";
 
 // Är admin inloggad? Då skapar vi en ta bort-knapp för alla medlemmar.
-if (localStorage.getItem("admin") !== null) {
+if (localStorage.getItem(adminUsername) !== null) {
     // En lista med alla vår medlemmar i listan.
     let li = document.getElementsByTagName("li");
     // Vi loopar igenom listan och lägger till en knapp för varje medlem.

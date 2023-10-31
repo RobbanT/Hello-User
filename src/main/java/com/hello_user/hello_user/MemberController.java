@@ -19,6 +19,7 @@ public class MemberController {
 
     @GetMapping("/member")
     String getMember(Model model) {
+        model.addAttribute("adminUsername", members.get(0).getUsername());
         model.addAttribute("members", members);
         return "member";
     }
