@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class MemberController {
 
-    // Listan som våra medlemmar kommer sparas i. Lägger till en admin-medlemm direkt när listan skapas.
+    // Listan som våra medlemmar kommer sparas i. Lägger till en admin-medlemm
+    // direkt när listan skapas.
     private static final List<Member> members = new ArrayList<>(Arrays.asList(new Member("admin", "admin")));
 
     @GetMapping("/")
@@ -24,12 +25,14 @@ public class MemberController {
 
     @GetMapping("/login")
     String getLogin(Model model) {
-        model.addAttribute("admin", members.get(0));
+        model.addAttribute("adminUsername", members.get(0).getUsername());
+        model.addAttribute("adminPassword", members.get(0).getPassword());
         return "login";
     }
 
     @GetMapping("/join")
     String getJoin(Model model) {
+        model.addAttribute("adminUsername", members.get(0).getUsername());
         model.addAttribute("newMember", new Member());
         return "join";
     }

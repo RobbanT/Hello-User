@@ -7,7 +7,13 @@
         <link rel="icon" href="favicon.png" />
         <link rel="stylesheet" href="common.css" />
         <link rel="stylesheet" href="form.css" />
+        <script>
+            // Hämtar information om admin med thymeleaf.
+            // Inte säker på om detta är det bästa sättet att göra det på men det fungerar.
+            let adminUsername = "[[${ adminUsername }]]";
+        </script>
         <script src="common.js" defer></script>
+        <script src="form.js" defer></script>
         <script src="join.js" defer></script>
     </head>
     <body>

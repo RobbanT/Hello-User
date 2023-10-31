@@ -7,7 +7,14 @@
         <link rel="icon" href="favicon.png" />
         <link rel="stylesheet" href="common.css" />
         <link rel="stylesheet" href="form.css" />
+        <script>
+            // Hämtar information om admin med thymeleaf.
+            // Inte säker på om detta är det bästa sättet att göra det på men det fungerar.
+            let adminUsername = "[[${ adminUsername }]]";
+            let adminPassword = "[[${ adminPassword }]]";
+        </script>
         <script src="common.js" defer></script>
+        <script src="form.js" defer></script>
         <script src="login.js" defer></script>
     </head>
     <body>
@@ -21,7 +28,7 @@
             <a href="/login">Logga in</a>
         </nav>
         <main>
-            <form th:value="${admin}">
+            <form>
                 <input class="inputField topInputField" id="username" type="text" placeholder="Användarnamn" maxlength="24" />
                 <input class="inputField bottomInputField" id="password" type="password" placeholder="Lösenord" maxlength="22" />
                 <input class="submitButton" id="login" type="button" value="Logga in" />

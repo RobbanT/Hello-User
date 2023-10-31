@@ -1,6 +1,6 @@
 package com.hello_user.hello_user;
 
-//Klass som använd för att skapa objekt som spara uppgifter om alla våra användare.
+//Klass som används för att skapa objekt som sparar uppgifter om alla användare.
 public class Member {
     // Vi sparar användarens användarnamn och lösenord.
     private String username, password;
