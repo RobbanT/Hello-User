@@ -1,22 +1,14 @@
 "use strict";
 
+// Input-fält exklusivt till new-member-sidan.
 let passwordConfirm = document.getElementById("passwordConfirm");
 
-passwordConfirm.addEventListener("focusin", (e) => {
-    if (e.target.getAttribute("placeholder") !== "") {
-        e.target.setAttribute("placeholder", "");
-        e.target.style.backgroundColor = "#FFFFFF";
-        e.target.style.borderColor = "#3438f5";
-    }
-});
+// Lägger till event-lyssnare till fältet.
+passwordConfirm.addEventListener("focusin", (e) => removePlaceholder(e));
+passwordConfirm.addEventListener("focusout", (e) => addPlaceholder(e, "Bekräfta Lösenord"));
 
-passwordConfirm.addEventListener("focusout", (e) => {
-    if (e.target.getAttribute("placeholder") === "") {
-        e.target.setAttribute("placeholder", "Bekräfta Lösenord");
-    }
-});
-
-document.getElementById("join").addEventListener("click", () => {
+// Sker massa olika kontroller här som kollar om användaren har matat in giltiga värden.
+document.getElementById("create").addEventListener("click", () => {
     if (username.value === "") {
         username.style.backgroundColor = "#FAF1F5";
         username.style.borderColor = "#C32B57";

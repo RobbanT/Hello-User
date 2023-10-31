@@ -14,7 +14,7 @@
         </script>
         <script src="admin.js" defer></script>
         <script src="form.js" defer></script>
-        <script src="join.js" defer></script>
+        <script src="new-member.js" defer></script>
     </head>
     <body>
         <header>
@@ -31,7 +31,7 @@
                 <input class="inputField topInputField" id="username" type="text" th:field="*{username}" placeholder="Användarnamn" maxlength="24" />
                 <input class="inputField middleInputField" id="password" type="text" th:field="*{password}" placeholder="Lösenord" maxlength="22" />
                 <input class="inputField bottomInputField" id="passwordConfirm" type="text" placeholder="Bekräfta Lösenord" maxlength="22" />
-                <input class="submitButton" id="join" type="button" value="Skapa konto" />
+                <input class="submitButton" id="create" type="button" value="Skapa konto" />
             </form>
         </main>
     </body>

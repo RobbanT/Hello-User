@@ -31,11 +31,11 @@ public class MemberController {
         return "login";
     }
 
-    @GetMapping("/join")
+    @GetMapping("/new-member")
     String getJoin(Model model) {
         model.addAttribute("adminUsername", members.get(0).getUsername());
         model.addAttribute("newMember", new Member());
-        return "join";
+        return "new-member";
     }
 
     @GetMapping("/remove-member/{memberUsername}")

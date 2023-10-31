@@ -19,18 +19,18 @@ function createAdminParagraph() {
     document.body.getElementsByTagName("header").item(0).appendChild(p);
 }
 
-//Skapar länk för att lägga till ny medlemmar på webbsidan.
+//Skapar länk för att lägga till nya medlemmar på webbsidan.
 function createAdminJoinLink() {
     //Skapar ett nytt element.
     let a = document.createElement("a");
     //Ställer in det nya elementet.
     a.innerText = "Ny medlem";
-    a.setAttribute("href", "/join");
+    a.setAttribute("href", "/new-member");
     //Lägger sist till elementen hos DOM:en.
     document.body.getElementsByTagName("nav").item(0).appendChild(a);
 }
 
-//Är admin inloggad (finns admin i localStorage?) skapar vi det som ska vara tillgängligt enbart för admin.
+//Är admin inloggad (finns admin i localStorage?) skapar vi allt som ska vara tillgängligt enbart för admin.
 if (localStorage.getItem("admin") !== null) {
     createAdminParagraph();
     createAdminJoinLink();
