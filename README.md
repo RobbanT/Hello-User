@@ -1,2 +1,2 @@
 # Hello User
-![](hello-user2.png)
+![](hello-user.png)
