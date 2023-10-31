@@ -24,7 +24,7 @@ function createAdminJoinLink() {
     //Skapar ett nytt element.
     let a = document.createElement("a");
     //Ställer in det nya elementet.
-    a.innerText = "Bli medlem";
+    a.innerText = "Ny medlem";
     a.setAttribute("href", "/join");
     //Lägger sist till elementen hos DOM:en.
     document.body.getElementsByTagName("nav").item(0).appendChild(a);
