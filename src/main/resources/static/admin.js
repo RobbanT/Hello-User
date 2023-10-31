@@ -19,7 +19,7 @@ function createAdminParagraph() {
     document.body.getElementsByTagName("header").item(0).appendChild(p);
 }
 
-//Skapar länk för att bli medlem på webbsidan.
+//Skapar länk för att lägga till ny medlemmar på webbsidan.
 function createAdminJoinLink() {
     //Skapar ett nytt element.
     let a = document.createElement("a");
