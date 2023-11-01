@@ -7,8 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class MemberController {
-
-    // Listan som våra medlemmar kommer sparas i. Lägger till en admin-medlemm direkt när listan skapas.
+    // Listan som våra medlemmar kommer sparas i. Lägger till en admin-medlem direkt när listan skapas.
     private static final List<Member> members = new ArrayList<>(Arrays.asList(new Member("admin", "admin")));
 
     @GetMapping("/")
