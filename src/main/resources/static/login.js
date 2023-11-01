@@ -8,15 +8,13 @@ document.getElementById("login").addEventListener("click", () => {
         if (localStorage.getItem(adminUsername) === null) {
             // Är admin inte redan inloggad sparar vi ner vår admins uppgifter i localstorage.
             localStorage.setItem(adminUsername, adminPassword);
-            setNormalStyle(username);
-            setNormalStyle(password);
             document.getElementsByTagName("form").item(0).submit();
         } else {
             // Är admin redan inloggad informeras admin om det.
             setErrorStyle(username, "Du är redan inloggad");
             setErrorStyle(password, "som admin! :)");
+            return;
         }
-        return;
     }
     // Stämmer inte användarnamnet?
     if (username.value !== adminUsername) {
