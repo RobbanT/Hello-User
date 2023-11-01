@@ -30,7 +30,7 @@ document.getElementById("create").addEventListener("click", () => {
         setErrorStyle(passwordConfirm, "Felaktigt Lösenord!");
         valid = false;
     }
-    // Stämmer inte lösenorden i de två input-fälten överens?
+    // Stämmer inte lösenorden överens?
     if (passwordConfirm.value !== password.value) {
         setErrorStyle(password, "Lösenord ej lika!");
         setErrorStyle(passwordConfirm, "Lösenord ej lika!");
