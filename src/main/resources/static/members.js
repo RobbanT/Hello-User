@@ -2,7 +2,7 @@
 
 // Är admin inloggad? Då skapar vi en ta bort-knapp för alla medlemmar.
 if (localStorage.getItem(adminUsername) !== null) {
-    // En lista med alla vår medlemmar i listan.
+    // En lista med ett element för varje medlem.
     let li = document.getElementsByTagName("li");
     // Vi loopar igenom listan och lägger till en knapp för varje medlem.
     for (let i = 0; i < li.length; i++) {
