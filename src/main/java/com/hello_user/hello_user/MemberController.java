@@ -46,7 +46,11 @@ public class MemberController {
 
     @PostMapping("/new-member")
     String newMember(@RequestParam("username") String username, @RequestParam("password") String password) {
-        members.add(new Member(username, password));
+        int num = 0;
+        for (Member member : members) {
+            num += member.getUsername() == username ? 1 : 0;
+        }
+        members.add(new Member(username + (num > 0 ? num : ""), password));
         return "redirect:/members";
     }
 }
