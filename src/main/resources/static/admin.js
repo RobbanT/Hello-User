@@ -26,7 +26,7 @@ function createAdminJoinLink() {
     // Ställer in det nya elementet.
     a.innerText = "Ny medlem";
     a.setAttribute("href", "/new-member");
-    // Lägger sist till elementen hos DOM:en.
+    // Lägger sist till elementet hos DOM:en.
     document.body.getElementsByTagName("nav").item(0).appendChild(a);
 }
 
