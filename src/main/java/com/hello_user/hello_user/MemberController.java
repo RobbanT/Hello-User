@@ -13,7 +13,8 @@ public class MemberController {
     private static final List<Member> members = new ArrayList<>(Arrays.asList(new Member("admin", "admin")));
 
     @GetMapping("/")
-    String getIndex() {
+    String getIndex(Model model) {
+        model.addAttribute("adminUsername", members.get(0).getUsername());
         return "index";
     }
 
