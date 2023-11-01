@@ -17,11 +17,11 @@ public class MemberController {
         return "index";
     }
 
-    @GetMapping("/member")
+    @GetMapping("/members")
     String getMember(Model model) {
         model.addAttribute("adminUsername", members.get(0).getUsername());
         model.addAttribute("members", members);
-        return "member";
+        return "members";
     }
 
     @GetMapping("/login")
@@ -41,12 +41,12 @@ public class MemberController {
     @GetMapping("/remove-member/{memberUsername}")
     String removeMember(@PathVariable String memberUsername) {
         members.removeIf(member -> member.getUsername().equals(memberUsername));
-        return "redirect:/member";
+        return "redirect:/members";
     }
 
     @PostMapping("/new-member")
     String newMember(@RequestParam("username") String username, @RequestParam("password") String password) {
         members.add(new Member(username, password));
-        return "redirect:/member";
+        return "redirect:/members";
     }
 }
