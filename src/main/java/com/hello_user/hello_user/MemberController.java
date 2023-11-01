@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class MemberController {
 
-    // Listan som våra medlemmar kommer sparas i. Lägger till en admin-medlemm
-    // direkt när listan skapas.
+    // Listan som våra medlemmar kommer sparas i. Lägger till en admin-medlemm direkt när listan skapas.
     private static final List<Member> members = new ArrayList<>(Arrays.asList(new Member("admin", "admin")));
 
     @GetMapping("/")
@@ -47,11 +46,10 @@ public class MemberController {
 
     @PostMapping("/new-member")
     String newMember(@RequestParam("username") String username, @RequestParam("password") String password) {
-        int num = 0;
-        for (Member member : members) {
-            num += member.getUsername() == username ? 1 : 0;
-        }
-        members.add(new Member(username + (num > 0 ? num : ""), password));
+        // Finns en medlem med angivet användarnamn redan? Då tar vi bort den. Gillar inte tanken att flera användare kan ha samma användarnamn.
+        members.removeIf(member -> member.getUsername().equals(username));
+        // Lägger till ny användare.
+        members.add(new Member(username, password));
         return "redirect:/members";
     }
 }

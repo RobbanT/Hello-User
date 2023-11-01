@@ -18,6 +18,7 @@ if (localStorage.getItem(adminUsername) !== null) {
             button.style.border = "1px solid red";
             button.addEventListener("mouseover", (e) => (e.target.style.backgroundColor = "red"));
             button.addEventListener("mouseout", (e) => (e.target.style.backgroundColor = "transparent"));
+            // Gör den synlig allra sist.
             button.setAttribute("hidden", false);
         }
     }
