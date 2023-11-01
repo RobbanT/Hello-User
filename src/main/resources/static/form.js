@@ -7,7 +7,7 @@ let password = document.getElementById("password");
 // Återställer ett input-fält efter att man har angivit ett felaktigt värde.
 function setNormalStyle(inputField, placeholder) {
     inputField.value = "";
-    inputField.getAttribute("placeholder", placeholder);
+    inputField.setAttribute("placeholder", placeholder);
     inputField.style.backgroundColor = "#FFFFFF";
     inputField.style.borderColor = "#3438f5";
 }
@@ -22,14 +22,14 @@ function setErrorStyle(inputField, placeholder) {
 
 // Tar bort input-fältets placeholder om fältet får fokus när det är tomt.
 function removePlaceholder(inputField) {
-    if (inputField.getAttribute("placeholder") !== "") {
-        setNormalStyle(inputField, placeholder);
+    if (inputField.getAttribute("placeholder") !== "" && inputField.value === "") {
+        setNormalStyle(inputField, "");
     }
 }
 
 // Lägger till placeholder om input-fältet är tomt när fältet förlorar fokus.
 function addPlaceholder(inputField, placeholder) {
-    if (inputField.getAttribute("placeholder") === "") {
+    if (inputField.getAttribute("placeholder") === "" && inputField.value === "") {
         inputField.setAttribute("placeholder", placeholder);
     }
 }
